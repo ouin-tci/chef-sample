@@ -6,3 +6,8 @@ log "Welcome to Chef Infra Client, #{node['example']['name']}!" do
 end
 
 # For more information, see the documentation: https://docs.chef.io/recipes.html
+
+
+file "/tmp/#{node['example']['filename']}" do
+  content "#{node['example']['content']}"
+end

@@ -1,0 +1,6 @@
+{
+  "name": "apserver",
+  "run_list": [
+    "recipe[example]"
+  ]
+}

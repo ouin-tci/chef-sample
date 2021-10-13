@@ -1,0 +1,75 @@
+{
+  "name": "chef.localhost",
+  "normal": {
+    "knife_zero": {
+      "host": "chef.localhost"
+    },
+    "tags": [
+
+    ]
+  },
+  "default": {
+    "audit": {
+      "inspec_backend_cache": true,
+      "reporter": "cli",
+      "fetcher": null,
+      "insecure": null,
+      "quiet": true,
+      "profiles": {
+
+      },
+      "inputs": {
+
+      },
+      "attributes": {
+
+      },
+      "waiver_file": null,
+      "json_file": {
+        "location": "/var/chef/compliance_reports/compliance-20211013092829.json"
+      },
+      "run_time_limit": 1.0,
+      "result_message_limit": 10000,
+      "result_include_backtrace": false,
+      "control_results_limit": 50,
+      "chef_node_attribute_enabled": true,
+      "compliance_phase": false
+    },
+    "example": {
+      "name": "Sam Doe",
+      "filename": "some_example_file",
+      "content": "wwww, something interesting."
+    }
+  },
+  "automatic": {
+    "fqdn": "localhost",
+    "os": "linux",
+    "os_version": "4.14.246-187.474.amzn2.x86_64",
+    "hostname": "localhost",
+    "ipaddress": "10.0.2.15",
+    "roles": [
+      "apserver"
+    ],
+    "recipes": [
+      "example",
+      "example::default"
+    ],
+    "platform": "amazon",
+    "platform_version": "2",
+    "cloud": null,
+    "chef_packages": {
+      "chef": {
+        "version": "17.6.18",
+        "chef_root": "/opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/chef-17.6.18/lib",
+        "chef_effortless": null
+      },
+      "ohai": {
+        "version": "17.6.0",
+        "ohai_root": "/opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/ohai-17.6.0/lib/ohai"
+      }
+    }
+  },
+  "run_list": [
+    "role[apserver]"
+  ]
+}

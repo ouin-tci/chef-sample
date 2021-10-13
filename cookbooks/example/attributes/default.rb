@@ -5,3 +5,6 @@
 default['example']['name'] = 'Sam Doe'
 
 # For further information, see the Chef documentation (https://docs.chef.io/attributes.html).
+
+default['example']['filename'] = 'some_example_file'
+default['example']['content'] = 'wwww, something interesting.'
