@@ -4,8 +4,8 @@ knife[:editor] = "/bin/vi"
 knife[:ssh_attribute] = "knife_zero.host"
 knife[:use_sudo] = true
 
-# knife[:ssh_identity_file] = '/vagrant/chef_private_key'
-knife[:ssh_identity_file] = '/vagrant/centos_key'
+knife[:ssh_identity_file] = '/root/.ssh/chef_key'
+# knife[:ssh_identity_file] = '/vagrant/centos_key'
 
 knife[:automatic_attribute_whitelist] = %w[
   fqdn

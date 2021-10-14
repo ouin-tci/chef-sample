@@ -9,32 +9,6 @@
     ]
   },
   "default": {
-    "audit": {
-      "inspec_backend_cache": true,
-      "reporter": "cli",
-      "fetcher": null,
-      "insecure": null,
-      "quiet": true,
-      "profiles": {
-
-      },
-      "inputs": {
-
-      },
-      "attributes": {
-
-      },
-      "waiver_file": null,
-      "json_file": {
-        "location": "/var/chef/compliance_reports/compliance-20211013094143.json"
-      },
-      "run_time_limit": 1.0,
-      "result_message_limit": 10000,
-      "result_include_backtrace": false,
-      "control_results_limit": 50,
-      "chef_node_attribute_enabled": true,
-      "compliance_phase": false
-    },
     "example": {
       "name": "Sam Doe",
       "filename": "some_example_file",
@@ -59,13 +33,12 @@
     "cloud": null,
     "chef_packages": {
       "chef": {
-        "version": "17.6.18",
-        "chef_root": "/opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/chef-17.6.18/lib",
-        "chef_effortless": null
+        "version": "15.14.0",
+        "chef_root": "/opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/chef-15.14.0/lib"
       },
       "ohai": {
-        "version": "17.6.0",
-        "ohai_root": "/opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/ohai-17.6.0/lib/ohai"
+        "version": "15.12.0",
+        "ohai_root": "/opt/chefdk/embedded/lib/ruby/gems/2.6.0/gems/ohai-15.12.0/lib/ohai"
       }
     }
   },

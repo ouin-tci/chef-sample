@@ -8,3 +8,4 @@ version '1.0.0'
 
 # depends           'apache2'
 depends           'java'
+depends             'ruby_rbenv'
