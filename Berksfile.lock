@@ -1,7 +1,9 @@
 DEPENDENCIES
   apache2 (~> 8.14.0)
+  ruby_rbenv (~> 4.0.1)
 
 GRAPH
   apache2 (8.14.0)
     yum-epel (>= 0.0.0)
+  ruby_rbenv (4.0.1)
   yum-epel (4.1.4)

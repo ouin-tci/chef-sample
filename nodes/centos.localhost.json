@@ -26,7 +26,7 @@
       },
       "waiver_file": null,
       "json_file": {
-        "location": "/var/chef/compliance_reports/compliance-20211014051559.json"
+        "location": "/var/chef/compliance_reports/compliance-20211014063020.json"
       },
       "run_time_limit": 1.0,
       "result_message_limit": 10000,
