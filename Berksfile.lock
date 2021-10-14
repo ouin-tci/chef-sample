@@ -1,0 +1,7 @@
+DEPENDENCIES
+  apache2 (~> 8.14.0)
+
+GRAPH
+  apache2 (8.14.0)
+    yum-epel (>= 0.0.0)
+  yum-epel (4.1.4)

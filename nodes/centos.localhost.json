@@ -1,8 +1,8 @@
 {
-  "name": "chef.localhost",
+  "name": "centos.localhost",
   "normal": {
     "knife_zero": {
-      "host": "chef.localhost"
+      "host": "centos.localhost"
     },
     "tags": [
 
@@ -26,7 +26,7 @@
       },
       "waiver_file": null,
       "json_file": {
-        "location": "/var/chef/compliance_reports/compliance-20211013094143.json"
+        "location": "/var/chef/compliance_reports/compliance-20211014051559.json"
       },
       "run_time_limit": 1.0,
       "result_message_limit": 10000,
@@ -42,10 +42,10 @@
     }
   },
   "automatic": {
-    "fqdn": "localhost",
+    "fqdn": "centos7.localdomain",
     "os": "linux",
-    "os_version": "4.14.246-187.474.amzn2.x86_64",
-    "hostname": "localhost",
+    "os_version": "3.10.0-1160.36.2.el7.x86_64",
+    "hostname": "centos7",
     "ipaddress": "10.0.2.15",
     "roles": [
       "apserver"
@@ -54,18 +54,18 @@
       "example",
       "example::default"
     ],
-    "platform": "amazon",
-    "platform_version": "2",
+    "platform": "centos",
+    "platform_version": "7.9.2009",
     "cloud": null,
     "chef_packages": {
       "chef": {
         "version": "17.6.18",
-        "chef_root": "/opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/chef-17.6.18/lib",
+        "chef_root": "/opt/chef/embedded/lib/ruby/gems/3.0.0/gems/chef-17.6.18/lib",
         "chef_effortless": null
       },
       "ohai": {
         "version": "17.6.0",
-        "ohai_root": "/opt/chef-workstation/embedded/lib/ruby/gems/3.0.0/gems/ohai-17.6.0/lib/ohai"
+        "ohai_root": "/opt/chef/embedded/lib/ruby/gems/3.0.0/gems/ohai-17.6.0/lib/ohai"
       }
     }
   },

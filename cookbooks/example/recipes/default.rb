@@ -11,3 +11,16 @@ end
 file "/tmp/#{node['example']['filename']}" do
   content "#{node['example']['content']}"
 end
+
+
+directory '/tmp/apache2' do
+  owner 'root'
+  group 'root'
+  mode '0755'
+  action :create
+end
+
+
+package "httpd" do
+  action :install
+end
