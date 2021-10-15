@@ -95,14 +95,15 @@ https://docs.chef.io/workstation/knife_node/#run_list-add
 
 ```bash
 cd path/to/repo
-knife node run_list add ${node_name} "role[apserver]"
+knife node run_list add ${node_name} "role[role_name]"
+knife node run_list add ${node_name} "recipe[recipe_name]"
 ```
 
 ### converge 
 
 ```bash
 cd path/to/repo
-knife zero converge "name:${hostname}" --ssh-user vagrant 
+knife zero converge "name:${node_name}" --ssh-user vagrant 
 # --override-runlist create_file
 ```
 
