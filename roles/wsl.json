@@ -1,0 +1,6 @@
+{
+  "name": "wsl",
+  "run_list": [
+    "recipe[apache_common]"
+  ]
+}

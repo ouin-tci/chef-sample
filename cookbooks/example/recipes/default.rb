@@ -56,8 +56,7 @@ rbenv_ruby '3.0.2' do
 end
 
 rbenv_global '3.0.2'
-
-rbenv_rehash 
+ 
 
 
 execute "download chefDK" do
@@ -75,5 +74,12 @@ end
 rbenv_gem 'knife-zero' do
   rbenv_version '3.0.2'
 end
+ 
 
-rbenv_rehash 
+package "httpd" do
+  action :install
+end
+
+service "httpd" do
+  action [:enable, :start]
+end
