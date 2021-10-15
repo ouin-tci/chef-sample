@@ -26,7 +26,9 @@
     ],
     "recipes": [
       "example",
-      "example::default"
+      "example::default",
+      "apache_common",
+      "apache_common::default"
     ],
     "platform": "amazon",
     "platform_version": "2",
@@ -43,6 +45,7 @@
     }
   },
   "run_list": [
-    "role[apserver]"
+    "role[apserver]",
+    "recipe[apache_common]"
   ]
 }

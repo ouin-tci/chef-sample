@@ -76,10 +76,10 @@ rbenv_gem 'knife-zero' do
 end
  
 
-package "httpd" do
-  action :install
-end
+# package "httpd" do
+#   action :install
+# end
 
-service "httpd" do
-  action [:enable, :start]
-end
+# service "httpd" do
+#   action [:enable, :start]
+# end

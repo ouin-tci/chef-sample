@@ -26,7 +26,7 @@
       },
       "waiver_file": null,
       "json_file": {
-        "location": "/var/chef/compliance_reports/compliance-20211015015847.json"
+        "location": "/var/chef/compliance_reports/compliance-20211015021326.json"
       },
       "run_time_limit": 1.0,
       "result_message_limit": 10000,
@@ -43,10 +43,11 @@
     "hostname": "PC-2186-wsl",
     "ipaddress": "172.31.62.158",
     "roles": [
-
+      "wsl"
     ],
     "recipes": [
-
+      "apache_common",
+      "apache_common::default"
     ],
     "platform": "ubuntu",
     "platform_version": "20.04",
