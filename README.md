@@ -128,3 +128,9 @@ berks install
 ```bash
 berks vendor cookbooks
 ```
+
+### alternative download tar.gz file
+```bash
+knife supermarket download apache2
+# then unzip it into cookbooks directory
+```
