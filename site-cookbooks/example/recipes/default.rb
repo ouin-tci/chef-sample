@@ -56,8 +56,6 @@ rbenv_ruby '3.0.2' do
 end
 
 rbenv_global '3.0.2'
- 
-
 
 execute "download chefDK" do
   command "wget -O /tmp/chefdk-4.13.3-1.el7.x86_64.rpm https://packages.chef.io/files/stable/chefdk/4.13.3/el/7/chefdk-4.13.3-1.el7.x86_64.rpm"
