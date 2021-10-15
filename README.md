@@ -14,8 +14,10 @@ yum localinstall chefdk-4.13.3-1.el7.x86_64.rpm
 #centos 8
 wget https://packages.chef.io/files/stable/chefdk/4.13.3/el/8/chefdk-4.13.3-1.el7.x86_64.rpm
 
+yum localinstall chefdk-4.13.3-1.el7.x86_64.rpm
+
 #setup(zsh)
-echo 'eval "$(chef shell-init zsh)"' >> ~/.zshrc
+# echo 'eval "$(chef shell-init zsh)"' >> ~/.zshrc
 ```
 
 ### install ruby via rbenv
