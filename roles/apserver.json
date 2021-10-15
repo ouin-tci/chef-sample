@@ -1,6 +1,8 @@
 {
   "name": "apserver",
   "run_list": [
-    "recipe[example]"
+    "recipe[example]",
+    "recipe[example::create_file]"
+
   ]
 }

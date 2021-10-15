@@ -27,6 +27,7 @@
     "recipes": [
       "example",
       "example::default",
+      "example::create_file",
       "apache_common",
       "apache_common::default"
     ],
