@@ -1,20 +1,127 @@
-# Overview
+http://knife-zero.github.io/20_getting_started/
 
-Every Chef Infra installation needs a Chef Repository. This is the place where cookbooks, policyfiles, config files and other artifacts for managing systems with Chef Infra will live. We strongly recommend storing this repository in a version control system such as Git and treating it like source code.
 
-# Repository Directories
+## chef dk install
 
-This repository contains several directories, and each directory contains a README file that describes what it is for in greater detail, and how to use it for managing your systems with Chef.
+https://downloads.chef.io/tools/chefdk
 
-- `cookbooks/` - Cookbooks you download or create.
-- `data_bags/` - Store data bags and items in .json in the repository.
-- `roles/` - Store roles in .rb or .json in the repository.
-- `environments/` - Store environments in .rb or .json in the repository.
+### redhat version
 
-# Configuration
+```bash
+wget https://packages.chef.io/files/stable/chefdk/4.13.3/el/7/chefdk-4.13.3-1.el7.x86_64.rpm
+yum localinstall chefdk-4.13.3-1.el7.x86_64.rpm
 
-The config file, `.chef/config.rb` is a repository-specific configuration file for the knife command line tool. If you're using the Hosted Chef platform, you can download one for your organization from the management console. You can also generate a new config.rb by running `knife configure`. For more information about configuring Knife, see the Knife documentation at https://docs.chef.io/knife.html
+#centos 8
+wget https://packages.chef.io/files/stable/chefdk/4.13.3/el/8/chefdk-4.13.3-1.el7.x86_64.rpm
 
-# Next Steps
+#setup(zsh)
+echo 'eval "$(chef shell-init zsh)"' >> ~/.zshrc
+```
 
-Read the README file in each of the subdirectories for more information about what goes in those directories.
+### install ruby via rbenv
+install rbenv manual of amazon linux 2
+https://qiita.com/ktoyod/items/e5c7c23cbd92c703feb9
+
+
+### install  knife-zero
+http://knife-zero.github.io/10_install/
+
+```bash
+gem install knife-zero
+rbenv rehash
+```
+
+## how to use
+
+
+### repoを作成する
+
+```bash
+chef generate repo my-repo
+cd my-repo
+
+#https://docs.chef.io/workstation/config_rb/
+touch ./config.rb
+#contents  
+### Setup Chef-Repo
+#https://knife-zero.github.io/20_getting_started/
+```
+		
+### cookbookを作成する
+
+About recipe: https://docs.chef.io/recipes.html
+
+resource: https://docs.chef.io/resources/
+
+```bash
+cd path/to/myrepo/cookbooks
+#example 1
+chef generate cookbook cookbooks/${recipe_name}
+# modify ./${recipe_name}/recipes/default.rb
+```
+	
+### roleを作成する
+
+roleとはいくつのrecipesの集合です
+
+```bash
+cd path/to/repo
+knife role create ${role-name}
+# add run list into json file
+"run_list": [
+    "recipe[recipe_name]",
+    "recipe[create_file]"
+]
+```
+
+
+### bootstartap host(create node)
+
+the hostname must has been configed in `~/.ssh/config, /etc/hosts`, the path of ssh key is set in `config.rb`
+```bash
+knife[:ssh_identity_file] = '/path/to/key'
+```
+
+```bash
+cd path/to/repo
+knife zero bootstrap ${hostname} --ssh-user vagrant -N ${node_name}
+```
+
+### add run list
+
+https://docs.chef.io/workstation/knife_node/#run_list-add
+
+```bash
+cd path/to/repo
+knife node run_list add ${node_name} "role[apserver]"
+```
+
+### converge 
+
+```bash
+cd path/to/repo
+knife zero converge "name:${hostname}" --ssh-user vagrant 
+# --override-runlist create_file
+```
+
+
+## about cookbook
+
+### use berks(old)
+
+```bash
+touch Berksfile
+#contents
+source "https://supermarket.chef.io"
+cookbook "apache2"
+```
+### install
+
+```bash
+berks install
+```
+### move cookbooks to vendor directory
+
+```bash
+berks vendor cookbooks
+```
