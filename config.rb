@@ -1,6 +1,11 @@
 local_mode true
 knife[:editor] = "/bin/vi"
 
+cookbook_path [
+  'cookbooks',
+  'site-cookbooks'
+]
+
 knife[:ssh_attribute] = "knife_zero.host"
 knife[:use_sudo] = true
 
